@@ -5,19 +5,40 @@
 		<link rel="icon" 
       type="image/png" 
       href="favicon.png" />
+		<script>
+			function checkPassword() {
+				var password = document.getElementById("disc_pass");
+				var password_text = password.value;
+				if(password_text == "ShopBooks") {
+					alert("Correct password, redirecting...");
+					return true;
+				}
+				alert("Incorrect password, please try again");
+				return false;
+			}
+		</script>
 		<style>
 		.shopbux {
-		font-family: Arial;
-		color: #4292f4;
-		text-align: center;
-		border: 5px dashed yellow;
+			font-family: Arial;
+			color: #4292f4;
+			text-align: center;
+			border: 5px dashed yellow;
 		}
 		.shopbux_apart {
-		width: 500px
+			width: 500px
 		}
 		.bitalics {
-		font-weight: bold;
-		font-style: italic;
+			font-weight: bold;
+			font-style: italic;
+		}
+		.button {
+			background-color: #EEEEEE;
+			color: #333333;
+			padding: 2px 6px 2px 6px;
+			border-top: 1px solid #CCCCCC;
+			border-right: 1px solid #333333;
+			border-bottom: 1px solid #333333;
+			border-left: 1px solid #CCCCCC;
 		}
 		</style>
 	</head>
@@ -110,7 +131,10 @@ Helpers: @Panda_Gamer1212
 			</p>
 		</div><br />
 		<div class="shopbux">
-			<p>Thank you for visiting this website and make sure to come on down to <a href="https://scratch.mit.edu/discuss/topic/347154">Scratch ShopBux</a>! Be sure to also check out our <a href="https://discord.gg/Zm8EGMD">discord server</a>!</p>
+			<p>Thank you for visiting this website and make sure to come on down to <a href="https://scratch.mit.edu/discuss/topic/347154">Scratch ShopBux</a>!<br /> 
+			Enter the password if you want access to the discord server.<br />
+			Password: <input id="disc_pass" type="password" />
+			<a class="button" href="https://discord.gg/Zm8EGMD" onclick="return checkPassword()">Submit</a></p>
 		</div>
 	</body>
 </html>
